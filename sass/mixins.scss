@@ -1,0 +1,9 @@
+@mixin color_hover($color: $maingreen) {
+    background-color: darken($color: $color, $amount: 5);
+}
+
+@mixin color_focus($color: $maingreen) {
+    box-shadow: 0 0 0 0.2rem rgba(darken($color: $color, $amount: 10), 0.5);
+    outline-color: rgba(darken($color: $color, $amount: 10), 0.5);
+}
+

@@ -1,0 +1,31 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "input.js",
+  "scripts": {
+    "dev-server": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "material-components-web": "^5.0.0",
+    "uuidv4": "^6.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "extract-loader": "^4.0.3",
+    "file-loader": "^5.1.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

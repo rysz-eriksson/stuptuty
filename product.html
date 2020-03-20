@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuptuty - product page</title>
+    <link rel="stylesheet" href="bundle.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/stuptuty-logo.jpg" alt="logo">
+      </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html#stuptuty">Stuptuty</a></li>
+            <li><a href="#">Sklep</a></li>
+            <li><a href="index.html#me">O mnie</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div>
+        <div class="basket">
+            <div class="basket-icon">
+                <img src="images/bagpack-icon.svg" alt="add-to-shopping-cart-icon" width="50px" height="50px">
+                <p class="no-show"></p></div>
+                <div class="basket-content">
+                  <p  class="no-show">Mój koszyk:</p>
+                  <p></p>
+                </div>
+                <div class="tooltip"></div>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/wa.sarapata" target="_blank"><img src="images/facebook_icon.svg" alt="facebook_logo"></a>
+          <a href="https://www.instagram.com/wa.sarapata/" target="_blank"><img src="images/instagram_icon.svg" alt="instagram_logo"></a>
+      </div>
+    </div>
+</header>
+  <div class="main__container">
+<div class="slider">
+  <div class="slider__container">
+    <div class="slider__item">
+      <img src="images/stuptuty-slider1.jpg" alt="stuptuty">
+    </div>
+    <div class="slider__thumbNav">
+    </div>
+    <div class="slider__prev">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="32" viewBox="-1 -1 12 32">
+        <path d="M 10,0 0,15 10,30" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>  
+    <div class="slider__next">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="32" viewBox="-1 -1 12 32">
+      <path d="M0 0l10 15L0 30" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  </div>
+</div>
+<div class="product__container">
+  <form action="" method="GET" id="product-form" class="product-form">
+    <h2>Wybierz stuptuty dla siebie</h2>
+    <p>Każda para jest ręcznie robiona w małym warsztacie na końcu świata, znajdującym sie w małej chatce, gdzie nie ma prądu, a ludzie jeżą tylko jagody. Dlatego właśnie stuptuty są takie wyjątkowe, a we wzorach dominuje kolor filetowy.</p>
+      <fieldset>
+        <legend>Rozmiar</legend>
+        <p>W razie trudności z ustaleniem rozmiaru służę pomocą <a href="index.html#contact" target="_blank">Napisz do mnie</a></p>
+        <label for="small">
+        <input type="radio" name="size" id="small" checked>
+          <img src="images/letter-s.svg" alt="small" width="50px" height="50px">
+        </label>
+        <label for="medium">
+        <input type="radio" name="size" id="medium">
+        <img src="images/letter-m.svg" alt="medium" width="50px" height="50px">
+      </label>
+      </fieldset>
+      <fieldset>
+        <legend>Wzór</legend>
+        <label for="palms">
+        <input type="radio" name="pattern" id="palms" checked>
+          <img src="images/tkanina1.jpg" alt="palms" width="50px" height="50px">
+        </label>
+        <label for="leaves">
+        <input type="radio" name="pattern" id="leaves">
+        <img src="images/tkanina2.jpg" alt="leaves" width="50px" height="50px">
+      </label>
+      <label for="birds">
+        <input type="radio" name="pattern" id="birds">
+        <img src="images/tkanina3.jpg" alt="birds" width="50px" height="50px">
+      </label>
+      <label for="flowers">
+        <input type="radio" name="pattern" id="flowers">
+        <img src="images/tkanina1.jpg" alt="flowers" width="50px" height="50px">
+      </label>
+      <label for="mountains">
+        <input type="radio" name="pattern" id="mountains">
+        <img src="images/tkanina2.jpg" alt="mountains" width="50px" height="50px">
+      </label>
+      <label for="sky">
+        <input type="radio" name="pattern" id="sky">
+        <img src="images/tkanina3.jpg" alt="sky" width="50px" height="50px">
+      </label>
+      </fieldset>
+      <div class="quan-added">
+      <div class="quantity">
+        <label for="quantity">Ilość
+        <input type="button" value="-" class="change-quantity">
+        <input type="number" name="quantity" value="1" min="1">
+        <input type="button" value="+" class="change-quantity">
+        </label>
+      </div>
+      <p class="added-to-basket">dodano do koszyka</p>
+    </div>
+      <div class="price-submit">
+    <div class="price">
+      <p>Cena</p>
+      <h2>150 zł</h2>
+    </div>
+      <input type="submit" value="do koszyka" class="button">
+      </div>
+      <div><a href="checkout.html" class="button to-checkout no-show">
+        <span>do kasy</span>
+        <svg enable-background="new 0 0 700 700" height="30px" id="Layer_1" version="1.1" viewBox="0 0 700 700" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="350" cy="350" fill="#ffffff" r="350"/><path d="M385.922,570.323l0.009,0.012l0.413-0.413c0.01-0.01,0.021-0.019,0.028-0.027h-0.001l220.084-220.083  L386.748,130.107c0.001-0.001,0.001-0.001,0.001-0.002c-0.019-0.018-0.037-0.034-0.056-0.053l-0.262-0.261l-0.007,0.007  c-19.16-18.82-49.943-18.724-68.975,0.307s-19.128,49.815-0.309,68.976l-0.009,0.009l0.316,0.314l102.493,102.491l-277.519,0.001  v0.064c-27,0.02-48.882,21.912-48.882,48.916c0,27.006,21.882,48.898,48.882,48.918v0.102l275.353,0.001L317.075,500.598  c-0.001-0.001-0.001-0.001-0.001-0.002c-0.021,0.02-0.036,0.038-0.055,0.057l-0.387,0.386l0.01,0.01  c-18.693,19.17-18.559,49.859,0.431,68.849C336.062,588.884,366.752,589.02,385.922,570.323z" fill="#315e71"/></svg>
+    </a></div>
+    </form>
+  </div>
+</div>
+    <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+    <script src="bundle.js" async></script>
+  </body>
+</html>
