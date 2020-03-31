@@ -10,7 +10,6 @@ for (let i=1; i < 6; i++) {
 
 // load slider__item on clicking the thumbnail
 const loadBigImage = (e) => {
-    console.log(e.target.src)
     const chosenImage = images.find((item) => e.target.src.includes(item.src))
     const bigImage = document.querySelector('.slider__item > img')
     bigImage.src = chosenImage.src
@@ -18,21 +17,23 @@ const loadBigImage = (e) => {
 }
 
 // populate slider__thumbNav with images from an array
-
-images.forEach((image) => {
+if (window.location.href.includes('product.html')) {
+    images.forEach((image) => {
     const imgEl = document.createElement('img')
     imgEl.src = image.src
     imgEl.classList.add('slider__thumbItem')
     document.querySelector('.slider__thumbNav').appendChild(imgEl)
     imgEl.addEventListener('click', loadBigImage)
-})
-document.querySelector('.slider__item').addEventListener('click', () => {
-    console.log(event)
-})
+    })
+}
+// document.querySelector('.slider__item').addEventListener('click', () => {
+//     console.log(event)
+// })
 
 // move slider__thumbNav on clicking an arrow
 
-document.querySelector('.slider__prev').addEventListener('click', () => {
+if (window.location.href.includes('product.html')) {
+    document.querySelector('.slider__prev').addEventListener('click', () => {
     const sliderDiv = document.querySelector('.slider__thumbNav')
     let offsetValue = sliderDiv.style.transform.length > 0 ? sliderDiv.style.transform.slice(10, -3) : 0
     let offset = offsetValue
@@ -60,3 +61,4 @@ document.querySelector('.slider__next').addEventListener('click', () => {
         })
     }
 })
+}

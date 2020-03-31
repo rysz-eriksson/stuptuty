@@ -1,3 +1,5 @@
+import { removeProductItem, loadProducts, saveProducts } from './products';
+
 // handling the view of the button showing the product got added to the basket 
 const addedProductVisible = () => {
     const elem = document.querySelector('.added-to-basket')
@@ -52,4 +54,70 @@ if (window.location.href.includes('product.html')) {
     })
 }
 
-export { addedProductVisible }
+const renderBasketView = () => {
+    let selectedProducts = [];
+    selectedProducts = loadProducts()
+    console.log(selectedProducts)
+    const basketContent = document.querySelector('.basket-content > p:nth-child(1)')
+    const basketAmount = document.querySelector('.basket-icon > p')
+    const basketPrize = document.querySelector('.basket-content > p:nth-child(2)')
+    const tooltip = document.querySelector('.tooltip')
+    const checkoutButton = document.querySelector('.to-checkout')
+    tooltip.innerHTML = ''
+    if (selectedProducts.length === 0) {
+        basketContent.classList.add('no-show')
+        basketAmount.classList.add('no-show')
+        basketPrize.classList.add('no-show')
+        if (checkoutButton) {
+            checkoutButton.classList.add('no-show')
+        }
+        tooltip.classList.remove('borders-on')
+    } else {
+        basketContent.classList.remove('no-show')
+        basketAmount.classList.remove('no-show')
+        basketPrize.classList.remove('no-show')
+        if (checkoutButton) {
+            checkoutButton.classList.remove('no-show')
+        }
+        tooltip.classList.add('borders-on')
+        let totalPrize = 0
+        selectedProducts.forEach(element => {
+            totalPrize = totalPrize + element.prize
+            // adding item to the basket tooltip
+            const productItem = document.createElement('div')
+            productItem.classList.add('tooltip-product-item')
+            productItem.innerHTML = `
+            <img src="${element.img}" width="40px" height="40px">
+            <div>
+              <p>Rozmiar: ${element.size}</p>
+              <p>Ilość: ${element.quantity}</p>
+            </div>
+              <p class="basket-price">Cena: ${element.prize} zł</p>
+            `
+            const removeButton = document.createElement('button')
+            removeButton.textContent = 'Usuń'
+            productItem.appendChild(removeButton)
+            removeButton.addEventListener('click', () => {
+                event.preventDefault()
+                removeProductItem(element.id)
+                saveProducts()
+                renderBasketView()
+            })
+            tooltip.appendChild(productItem)
+
+        });
+        basketPrize.textContent = `${totalPrize} zł`
+        basketAmount.textContent = selectedProducts.length
+        const tooltipSummary = document.createElement('div')
+        tooltipSummary.classList.add('tooltip-summary')
+        tooltipSummary.innerHTML = `
+        <button class="button" id="tooltip-to-checkout" onclick="window.location.href = 'checkout.html';">do kasy</button>
+        <p>Razem: ${totalPrize} zł</p>
+        `
+        tooltip.appendChild(tooltipSummary)
+    }
+}
+
+renderBasketView()
+
+export { addedProductVisible, renderBasketView }
