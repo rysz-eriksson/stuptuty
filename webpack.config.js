@@ -2,6 +2,7 @@ const autoprefixer = require('autoprefixer');
 const path = require('path')
 
 module.exports = {
+  devtool: 'source-map',
   entry: ['./src/app.scss', './src/app.js'],
   output: {
     filename: 'bundle.js',
