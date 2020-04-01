@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuptuty</title>
+    <link rel="stylesheet" href="bundle.css">
+</head>
+<body style="background: url(images/background4.PNG) white;">
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/stuptuty-logo.jpg" alt="logo">
+          </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#stuptuty">Stuptuty</a></li>
+            <li><a href="product.html">Sklep</a></li>
+            <li><a href="#me">O mnie</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div>
+        <div class="basket">
+            <div class="basket-icon">
+                <img src="images/bagpack-icon.svg" alt="add-to-shopping-cart-icon" width="50px" height="50px">
+                <p class="no-show"></p></div>
+                <div class="basket-content">
+                  <p  class="no-show">Mój koszyk:</p>
+                  <p></p>
+                </div>
+                <div class="tooltip no-show"></div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/wa.sarapata" target="_blank"><img src="images/facebook_icon.svg" alt="facebook_logo"></a>
+            <a href="https://www.instagram.com/wa.sarapata/" target="_blank"><img src="images/instagram_icon.svg" alt="instagram_logo"></a>
+        </div>
+    </div>
+</header>
+<section id="stuptuty" class="reversed">
+    <div class="content">
+        <h2>Stuptuty, co to?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid tenetur temporibus ipsa quas officia quaerat eaque, delectus quo dignissimos! Aliquam ratione mollitia minima quia. Minus deleniti consequatur eveniet a quos.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A qui repellendus possimus illum soluta. Assumenda laudantium sint corporis tenetur aliquam soluta, hic deserunt ad alias similique reiciendis officiis quas porro.Voluptas placeat perspiciatis id laborum omnis. Voluptates asperiores libero nam illum doloremque eveniet minima a fugiat consequuntur voluptatum, ut autem ratione molestias obcaecati quos blanditiis nisi voluptatibus, ex inventore qui?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magni aliquam tempora dolore quo eaque. Sint aspernatur repudiandae eum vitae delectus libero impedit, error dolorem ad eaque expedita numquam cum!</p>
+        <a href="product.html" class="button to-shop">
+            <span>Sklep</span>
+            <svg enable-background="new 0 0 700 700" height="30px" id="Layer_1" version="1.1" viewBox="0 0 700 700" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="350" cy="350" fill="#ffffff" r="350"/><path d="M385.922,570.323l0.009,0.012l0.413-0.413c0.01-0.01,0.021-0.019,0.028-0.027h-0.001l220.084-220.083  L386.748,130.107c0.001-0.001,0.001-0.001,0.001-0.002c-0.019-0.018-0.037-0.034-0.056-0.053l-0.262-0.261l-0.007,0.007  c-19.16-18.82-49.943-18.724-68.975,0.307s-19.128,49.815-0.309,68.976l-0.009,0.009l0.316,0.314l102.493,102.491l-277.519,0.001  v0.064c-27,0.02-48.882,21.912-48.882,48.916c0,27.006,21.882,48.898,48.882,48.918v0.102l275.353,0.001L317.075,500.598  c-0.001-0.001-0.001-0.001-0.001-0.002c-0.021,0.02-0.036,0.038-0.055,0.057l-0.387,0.386l0.01,0.01  c-18.693,19.17-18.559,49.859,0.431,68.849C336.062,588.884,366.752,589.02,385.922,570.323z" fill="#3f6e64"/></svg>
+        </a>
+    </div>
+    <div class="image">
+        <img src="images/stuptuty2.jpg" alt="stuptuty-w-roznych-kolorach">
+    </div>
+</section>
+<section id="me">
+    <div class="content">
+        <h2>Nazywam się Wanda</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, necessitatibus. Saepe nulla tempore esse consequatur? Odit, aliquam sunt quam nostrum natus rerum ut earum. Ut reprehenderit laboriosam repellat quam odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vel at corporis possimus excepturi labore! Doloremque beatae, ipsam non necessitatibus deleniti, tempore enim, nam sequi quisquam porro eius corrupti autem.</p>
+    </div>
+    <div class="image">
+        <img src="images/portret.jpg" alt="portret-autorki">
+    </div>
+</section>
+<section id="contact" class="reversed">
+    <div class="content">
+        <div class="contact-container">
+        <h2>Napisz do mnie</h2>
+        <p>Chętnie doradzę i odpowiem na wszelkie pytania dotyczące stuptutów :)</p>
+        <form action="" method="post" class="contact-form">
+            <div class="form__area">
+            <label for="name" class="form__label">Imię</label>
+            <input name="name" id="name" class="form__input">
+        </div>
+        <div class="form__area">
+            <label for="mail" class="form__label">E-mail</label>
+            <input name="mail" id="mail" class="form__input">
+        </div>
+            <div class="form__area">
+            <label for="message" class="form__label">Wiadomość</label>
+            <textarea name="message" id="message" rows="5" class="form__input"></textarea>
+        </div>
+            <input type="submit" value="Wyślij" class="send-mail">
+            </form>
+        </div>
+    </div>
+    <div class="image">
+        <img src="images/black-steel-mailboxes-cut.jpg" alt="mailboxes">
+    </div>
+</section>
+    <script src="bundle.js" async></script>
+</body>
+</html>

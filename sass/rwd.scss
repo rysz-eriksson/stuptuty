@@ -1,0 +1,39 @@
+@media only screen and (max-width: 960px) {
+    header div {
+        padding: 0 .5rem;
+    }
+    .basket-content {
+        display: none !important;
+    }
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        .image, .content {
+        width: 100%;
+        
+        }
+        .image {
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            width: 80%;
+            margin: 2rem 0;
+        }
+        .content {
+            p {
+                width: 80%;
+                margin: 0 auto;
+                padding: 0;
+                padding-top: 1rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .to-shop {
+        width: 160px;
+        margin-right: 20%;
+    }
+}
+
+// < 600 px - need to change the menu 
