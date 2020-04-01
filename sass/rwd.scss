@@ -1,9 +1,17 @@
+@media only screen and (max-width: 1260px) {
+    
+}
+
 @media only screen and (max-width: 960px) {
     header div {
         padding: 0 .5rem;
     }
     .basket-content {
         display: none !important;
+    }
+    .tooltip {
+        width: 400%;
+        left: -150%;
     }
     section {
         display: flex;
@@ -36,4 +44,20 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    header {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    header nav {
+        width: 0 !important;
+        display: none !important;
+    }
+    .hamburger {
+        width: 50px;
+    }
+}
+
 // < 600 px - need to change the menu 
+
+// <span class="toggle">☰</span>

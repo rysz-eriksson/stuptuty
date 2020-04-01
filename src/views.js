@@ -1,5 +1,24 @@
 import { removeProductItem, loadProducts, saveProducts } from './products';
 
+// handling the view of the side-menu
+
+document.querySelector('.hamburger').addEventListener('click', (item) => {
+    item.target.classList.toggle('side-active')
+    // accessing side-menu
+    const sideMenu = item.toElement.nextElementSibling
+    sideMenu.classList.toggle('side-slide')
+})
+
+// moving the side menu back out of the window once the link is clicked 
+
+const sidemenuLinks = document.querySelectorAll('.side-menu > nav > ul > li > a')
+
+sidemenuLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        document.querySelector('.side-menu').classList.toggle('side-slide')
+    })
+})
+
 // handling the view of the button showing the product got added to the basket 
 const addedProductVisible = () => {
     const elem = document.querySelector('.added-to-basket')
@@ -57,7 +76,6 @@ if (window.location.href.includes('product.html')) {
 const renderBasketView = () => {
     let selectedProducts = [];
     selectedProducts = loadProducts()
-    console.log(selectedProducts)
     const basketContent = document.querySelector('.basket-content > p:nth-child(1)')
     const basketAmount = document.querySelector('.basket-icon > p')
     const basketPrize = document.querySelector('.basket-content > p:nth-child(2)')
