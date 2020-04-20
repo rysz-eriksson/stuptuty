@@ -30,34 +30,46 @@ if (window.location.href.includes('product.html')) {
 //     console.log(event)
 // })
 
+
 // move slider__thumbNav on clicking an arrow
 
 if (window.location.href.includes('product.html')) {
-    document.querySelector('.slider__prev').addEventListener('click', () => {
+
+    const sliderPrev = document.querySelector('.slider__prev')
+    const sliderNext = document.querySelector('.slider__next')
     const sliderDiv = document.querySelector('.slider__thumbNav')
+
+    
+
+    sliderPrev.addEventListener('click', () => {
     let offsetValue = sliderDiv.style.transform.length > 0 ? sliderDiv.style.transform.slice(10, -3) : 0
+    let width = sliderDiv.offsetWidth
+    let itemLength = 0.2 * width
     let offset = offsetValue
+    console.log(offset)
     if (offset != 0) {
     const move = sliderDiv.animate([
         {transform: `translate(${parseInt(offset)}px)`},
-        {transform: `translate(${parseInt(offset) + 205}px)`}
+        {transform: `translate(${parseInt(offset) + itemLength}px)`}
     ], 500)
     move.addEventListener('finish', () => {
-        sliderDiv.style.transform = `translate(${parseInt(offset) + 205}px)`;
+        sliderDiv.style.transform = `translate(${parseInt(offset) + itemLength}px)`;
         })
     }
 })
-document.querySelector('.slider__next').addEventListener('click', () => {
-    const sliderDiv = document.querySelector('.slider__thumbNav')
+    sliderNext.addEventListener('click', () => {
     let offsetValue = sliderDiv.style.transform.length > 0 ? sliderDiv.style.transform.slice(10, -3) : 0
+    let width = sliderDiv.offsetWidth
+    let itemLength = 0.2 * width
     let offset = offsetValue
-    if (Math.abs(offset) < (images.length - 3) * 205) {
+    console.log(offset)
+    if (Math.abs(offset) < (images.length - 3) * itemLength) {
     const move = sliderDiv.animate([
         {transform: `translate(${offset}px)`},
-        {transform: `translate(${offset - 205}px)`}
+        {transform: `translate(${offset - itemLength}px)`}
     ], 500)
     move.addEventListener('finish', () => {
-        sliderDiv.style.transform = `translate(${offset - 205}px)`;
+        sliderDiv.style.transform = `translate(${offset - itemLength}px)`;
         })
     }
 })
