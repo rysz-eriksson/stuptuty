@@ -2,7 +2,8 @@ import { removeProductItem, loadProducts, saveProducts } from './products';
 
 // handling the view of the side-menu
 
-document.querySelector('.hamburger').addEventListener('click', (item) => {
+const hamburgerMenu = document.querySelector('.hamburger')
+hamburgerMenu.addEventListener('click', (item) => {
     item.target.classList.toggle('side-active')
     // accessing side-menu
     const sideMenu = item.toElement.nextElementSibling
@@ -16,6 +17,8 @@ const sidemenuLinks = document.querySelectorAll('.side-menu > nav > ul > li > a'
 sidemenuLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
         document.querySelector('.side-menu').classList.toggle('side-slide')
+        hamburgerMenu.classList.remove('side-active')
+
     })
 })
 
