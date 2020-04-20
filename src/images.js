@@ -39,8 +39,6 @@ if (window.location.href.includes('product.html')) {
     const sliderNext = document.querySelector('.slider__next')
     const sliderDiv = document.querySelector('.slider__thumbNav')
 
-    
-
     sliderPrev.addEventListener('click', () => {
     let offsetValue = sliderDiv.style.transform.length > 0 ? sliderDiv.style.transform.slice(10, -3) : 0
     let width = sliderDiv.offsetWidth
